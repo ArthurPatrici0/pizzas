@@ -78,7 +78,7 @@ export function ModalCarrinho({ isOpen, setOpen, itens, removerItem, limparCarri
             🎉 Obrigado pelo seu pedido! ${deliveryOption === 'delivery' ? 'Avisaremos quando o pedido estiver a caminho!' : 'Aguardamos você!'} 🍽️
             `;
         
-        const numeroWhatsapp = '5545998507413';
+        const numeroWhatsapp = '5545999999999';
         const url = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${encodeURIComponent(mensagem)}`;
         
         window.open(url, '_blank');
