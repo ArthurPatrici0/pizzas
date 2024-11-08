@@ -1,0 +1,30 @@
+.container_ingrediente{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.values{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+.nome{
+    font-size: 10px;
+    color: rgb(20, 20, 20);
+    font-family: "Rhodium Libre", serif;
+}
+
+.valor_ingrediente{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 40px;
+    height: 35px;
+}

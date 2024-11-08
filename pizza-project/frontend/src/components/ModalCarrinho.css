@@ -1,0 +1,241 @@
+.background_modal {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal_carrinho {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    max-height: 80vh;  /* Altura máxima para a modal */
+    overflow-y: auto;   /* Adicionando rolagem aqui */
+}
+
+.close_button {
+    position: absolute;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #ff4d4d;
+}
+
+.title_carrinho {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.itens_carrinho {
+    max-height: 300px;  /* Altura máxima para a seção de itens */
+    overflow-y: auto;   /* Permite rolagem para os itens do carrinho */
+    margin-bottom: 20px;
+    flex-grow: 1;       /* Flex-grow para ocupar espaço disponível */
+}
+
+.item_carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0; 
+    border-bottom: 1px solid #eaeaea;
+}
+
+.imagem_pizza_carrinho {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.info_item {
+    flex-grow: 1;
+    margin-left: 10px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.nome_pizza_carrinho {
+    font-weight: bold;
+}
+
+.preco_pizza_carrinho {
+    margin-top: 5px;
+    color: #7e7c7c;
+}
+
+.remover_button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; 
+}
+
+.caixa_carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.valor_carrinho {
+    display: flex;
+    align-items: center;
+}
+
+.valor_numero_carrinho {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.pagamento_button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 60%;
+    margin-left: 20px; 
+}
+
+.pagamento_button:hover {
+    background-color: rgb(5, 129, 53);
+}
+
+/* Melhorias gerais */
+.form_pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupos do formulário */
+.form_group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilização das labels */
+.form_group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Estilização dos inputs */
+.form_group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Foco nos inputs */
+.form_group input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+/* Estilização dos botões */
+.pagamento_button, .voltar_button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    margin-top: 10px;
+}
+
+/* Efeito hover no botão */
+.pagamento_button:hover, .voltar_button:hover {
+    background-color: rgb(5, 129, 53);
+}
+
+/* Radio buttons */
+.form_group label input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Estilização do campo de endereço quando "Delivery" for selecionado */
+.form_group.endereco {
+    display: flex;
+    flex-direction: column;
+}
+
+.endereco label {
+    font-weight: bold;
+}
+
+.endereco input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Ajustes visuais para dispositivos móveis */
+@media (max-width: 768px) {
+    .modal_carrinho {
+        width: 90%;
+    }
+
+    .form_pedido {
+        padding: 15px;
+    }
+}
+
+.custom_alert_popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336; /* Cor vermelha para alerta */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 16px;
+    text-align: center;
+    animation: fadeInOut 4s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}

@@ -1,0 +1,35 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "root",
+      "senha": "123123"
+    }
+  ],
+  "pizzas": [
+    {
+      "id": "1730765324921",
+      "nome": "PIZZA CALABRESA",
+      "valor": "30,00",
+      "descricao": "Pizza com queijo mussarela e rodelas de calabresa com manjericão e pitadas de oregano, carinhosamente preparadas.",
+      "calorias": "1822",
+      "imagem": "OIP.jpg"
+    },
+    {
+      "id": "1730765405204",
+      "nome": "PIZZA MISTA",
+      "valor": "40,00",
+      "descricao": "Pizza com queijo mussarela e rodelas de calabresa com manjericão e pitadas de oregano, carinhosamente preparadas.",
+      "calorias": "480",
+      "imagem": "7vLOBF.jpg"
+    },
+    {
+      "id": "1730845159404",
+      "nome": "PIZZA MUSSARELA",
+      "valor": "30,00",
+      "descricao": "Pizza com queijo mussarela e rodelas de calabresa com manjericão e pitadas de oregano, carinhosamente preparadas.",
+      "calorias": "481",
+      "imagem": "Screenshot_33.png"
+    }
+  ]
+}
